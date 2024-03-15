@@ -23,8 +23,10 @@ class Game:
         self.shape = obstacle.shape
         self.block_size = 6
         self.blocks = pygame.sprite.Group()
-        self.create_block(40,480)
-        ### ADD MORE BLOCKS ###
+        self.create_block(40, 480)
+        self.create_block(190, 480)
+        self.create_block(340, 480)
+        self.create_block(490, 480)
 
         # Alient set-up
         self.aliens = pygame.sprite.Group()
