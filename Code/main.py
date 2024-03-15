@@ -182,6 +182,23 @@ class Game:
         self.display_score()
         self.display_victory()
 
+class CRT:
+    def __init__(self):
+        self.tv = pygame.image.load('../Graphics/tv.png').convert_alpha()
+        self.tv = pygame.transform.scale(self.tv, (screen_width, screen_height))
+    
+    def create_lines(self):
+        line_height = 3
+        line_number = int(screen_height / line_height)
+        for line in range(line_number):
+            y_pos = line * line_height
+            pygame.draw.line(self.tv, 'black', (0, y_pos), (screen_width, y_pos), 1)
+
+    def draw(self):
+        self.tv.set_alpha(randint(75,90))
+        self.create_lines()
+        screen.blit(self.tv, (0,0))
+
 # If statement to handle use of multiple files
 if __name__ == '__main__':
     # Initializing Pygame
@@ -191,6 +208,7 @@ if __name__ == '__main__':
     screen = pygame.display.set_mode((screen_width, screen_height))
     clock = pygame.time.Clock()
     game = Game()
+    crt = CRT()
 
     alien_laser_timer = pygame.USEREVENT + 1
     pygame.time.set_timer(alien_laser_timer, 750)
@@ -209,5 +227,6 @@ if __name__ == '__main__':
 
         # Update the display to draw anything from the game
         game.run()
+        crt.draw()
         pygame.display.flip()
         clock.tick(60)

@@ -59,7 +59,7 @@
 
 ![Product Name Screen Shot][product-screenshot]
 
-This is a recreation of the popular game 'Space Invader' in Python using the Pygame library. I have to create proper graphics for the game. I may add an AI player or AI aliens in the future, but this isn't a planned feature. Credits for the music can be found in [attributions.txt](https://github.com/FowwazM/Space-Invader/blob/main/Audio/attributions.txt)
+This is a recreation of the popular game 'Space Invader' in Python using the Pygame library. I may add an AI player or AI aliens in the future, but this isn't a planned feature. Credits for the music can be found in [attributions.txt](https://github.com/FowwazM/Space-Invader/blob/main/Audio/attributions.txt)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -98,9 +98,9 @@ pip install pygame
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Improved Graphics
-    - [ ] Add a CRT screen overlay
-    - [ ] Create new player and alien sprites
+- [x] Improved Graphics
+    - [x] Add a CRT screen overlay
+    - [x] Create new player and alien sprites
 - [ ] Player Sprite Selection
 - [ ] Create an infinite game-mode
 
